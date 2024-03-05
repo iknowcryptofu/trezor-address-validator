@@ -188,7 +188,8 @@ function toByteArray (b64) {
     ? validLen - 4
     : validLen
 
-  for (var i = 0; i < len; i += 4) {
+  var i
+  for (i = 0; i < len; i += 4) {
     tmp =
       (revLookup[b64.charCodeAt(i)] << 18) |
       (revLookup[b64.charCodeAt(i + 1)] << 12) |
@@ -2564,6 +2565,7 @@ module.exports = BigNumber;
 
 }).call(this,require("buffer").Buffer)
 },{"buffer":5}],5:[function(require,module,exports){
+(function (Buffer){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -4342,7 +4344,8 @@ function numberIsNaN (obj) {
   return obj !== obj // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":2,"ieee754":36}],6:[function(require,module,exports){
+}).call(this,require("buffer").Buffer)
+},{"base64-js":2,"buffer":5,"ieee754":36}],6:[function(require,module,exports){
 /*
  * The MIT License (MIT)
  *
@@ -8211,10 +8214,11 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
   if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
     return false;
   }
-  // Assume cyclic values are equal.
-  var stacked = stack.get(array);
-  if (stacked && stack.get(other)) {
-    return stacked == other;
+  // Check that cyclic values are equal.
+  var arrStacked = stack.get(array);
+  var othStacked = stack.get(other);
+  if (arrStacked && othStacked) {
+    return arrStacked == other && othStacked == array;
   }
   var index = -1,
       result = true,
@@ -8422,10 +8426,11 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
       return false;
     }
   }
-  // Assume cyclic values are equal.
-  var stacked = stack.get(object);
-  if (stacked && stack.get(other)) {
-    return stacked == other;
+  // Check that cyclic values are equal.
+  var objStacked = stack.get(object);
+  var othStacked = stack.get(other);
+  if (objStacked && othStacked) {
+    return objStacked == other && othStacked == object;
   }
   var result = true;
   stack.set(object, other);
@@ -15457,7 +15462,7 @@ module.exports = {
 
 },{"../src/crypto/utils":144,"./crypto/base58":137}],160:[function(require,module,exports){
 const { addressType } = require('../src/crypto/utils');
-const accountRegex = new RegExp('^[a-z0-9-.]{3,}$')
+const accountRegex = new RegExp('^[a-z0-9-.]{3,16}$')
 const segmentRegex = new RegExp('^[a-z][a-z0-9-]+[a-z0-9]$')
 const doubleDashRegex = new RegExp('--')
 
