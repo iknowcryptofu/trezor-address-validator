@@ -3,19 +3,31 @@ var WAValidator = require('trezor-address-validator');
 //var ETHValidator = require('../trezor-address-validator/src/ethereum_validator');
 //var ETHValidator = "";
 //var curr = require('./currenciestxt');
-
+//import { jsonCurrencies } from "./currenciesJsonFinal.js";
+var jsonCurrencies2 = require("./currenciesJsonFinal.js");
 var fs = require('fs');
-//import {curr }from "./currenciestxt.js";
-//var allCurrencies = WAValidator.getCurrencies();
-//var excludeEth = allCurrencies.filter(checkForEth);
+
+
+function checkForEth(item,index){
+    
+    if(item.validator == 'ETHValidator'){
+        console.log(index);
+        console.log(item);
+    }
+}
 
 // function checkForEth(item){
 //     return item.validator != ETHValidator;
 // }
 
-// function checkForEth(item){
-//     return item.symbol == "zil";
-// }
+//import {curr }from "./currenciestxt.js";
+
+var allCurrencies = WAValidator.getCurrencies();
+
+var excludeEth = jsonCurrencies2.jsonCurrencies.filter(checkForEth);
+console.log(excludeEth);
+
+
 
 //console.log(excludeEth);
 //the following finds 271 currencies in CURRENCIES array var.
