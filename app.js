@@ -20,24 +20,24 @@ console.log(allCurr.length);
 
 //console.log(JSON.stringify(jsonCurrencies));
 var i = 0;
-// var ele = [];
-// for(const [index,element] of jsonCurrencies.entries()) {
-// 	if(element.validator !="ETHValidator") {
-// 		i++;
-// 		//console.log(element);
-// 		var vali = element.validator;
-// 		vali.replace(/['"]+/g, '');
-// 		element.validator = vali;
-// 		ele.push(element);
-// 		console.log(ele);
-// 	}
+var ele = [];
+for(const [index,element] of jsonCurrencies.entries()) {
+	if(element.validator !="ETHValidator") {
+		i++;
+		//console.log(element);
+		var vali = element.validator;
+		vali.replace(/['"]+/g, '');
+		element.validator = vali;
+		ele.push(element);
+		console.log(ele);
+	}
 	
-// }
-// fs.writeFile('newdata.js',JSON.stringify(ele), function(err) {
-// 	if(err) {
-// 		console.log(err);
-// 	}
-// });
+}
+fs.writeFile('newdata.js',JSON.stringify(ele), function(err) {
+	if(err) {
+		console.log(err);
+	}
+});
 
 //var jsonResults2 = jsonCurrencies.filter(({validator}) => validator !== "ETHValidator");
 //console.log(JSON.stringify(jsonResults2));
