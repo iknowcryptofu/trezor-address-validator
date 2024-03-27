@@ -338,14 +338,6 @@ var CURRENCIES = [
     //     symbol: 'iota',
     //     validator: IOTAValidator,
     }, {
-        name: 'YOU COIN',
-        symbol: 'you',
-        validator: ETHValidator,
-    }, {
-        name: 'Zap',
-        symbol: 'zap',
-        validator: ETHValidator,
-    }, {
         name: 'Nano',
         symbol: 'nano',
         validator: NANOValidator,
@@ -395,46 +387,6 @@ var CURRENCIES = [
         symbol: 'sky',
         validator: XLMValidator,
     }, {
-        name: 'BTU Protocol',
-        symbol: 'btu',
-        validator: ETHValidator,
-    }, {
-        name: 'Crypto.com Coin',
-        symbol: 'cro',
-        validator: ETHValidator,
-    }, {
-        name: 'Multi-collateral DAI',
-        symbol: 'dai',
-        validator: ETHValidator,
-    }, {
-        name: 'Enjin Coin',
-        symbol: 'enj',
-        validator: ETHValidator,
-    }, {
-        name: 'HedgeTrade',
-        symbol: 'hedg',
-        validator: ETHValidator,
-    }, {
-        name: 'Cred',
-        symbol: 'lba',
-        validator: ETHValidator,
-    }, {
-        name: 'Chainlink',
-        symbol: 'link',
-        validator: ETHValidator,
-    }, {
-        name: 'Loom Network',
-        symbol: 'loom',
-        validator: ETHValidator,
-    }, {
-        name: 'Maker',
-        symbol: 'mkr',
-        validator: ETHValidator,
-    }, {
-        name: 'Metal',
-        symbol: 'mtl',
-        validator: ETHValidator,
-    }, {
         name: 'Ocean Protocol',
         symbol: 'ocean',
         validator: ETHValidator,
@@ -443,37 +395,9 @@ var CURRENCIES = [
     //    symbol: 'pts', # FIXME: symbol collides with ProtoShares
     //    validator: BTCValidator,
     }, {
-        name: 'Quant',
-        symbol: 'qnt',
-        validator: ETHValidator,
-    }, {
-        name: 'Synthetix Network',
-        symbol: 'snx',
-        validator: ETHValidator,
-    }, {
-        name: 'SOLVE',
-        symbol: 'solve',
-        validator: ETHValidator,
-    }, {
         name: 'Solana',
         symbol: 'sol',
         validator: SOLValidator,
-    }, {
-        name: 'Spendcoin',
-        symbol: 'spnd',
-        validator: ETHValidator,
-    }, {
-        name: 'TEMCO',
-        symbol: 'temco',
-        validator: ETHValidator,
-    }, {
-        name: 'Luniverse',
-        symbol: 'luniverse',
-        validator: ETHValidator,
-    }, {
-        name: 'Binance Smart Chain',
-        symbol: 'bsc',
-        validator: ETHValidator,
     }, {
         name: 'Binance',
         symbol: 'bnb',
