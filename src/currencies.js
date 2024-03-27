@@ -130,14 +130,6 @@ var CURRENCIES = [
         addressTypes: { prod: ['47', '05'], testnet: ['4a', 'c4', '6f'] },
         validator: BTCValidator,
     }, {
-        name: 'VeChain',
-        symbol: 'ven',
-        validator: ETHValidator,
-    }, {
-        name: 'VeChain Mainnet',
-        symbol: 'vet',
-        validator: ETHValidator,
-    }, {
         name: 'BitcoinGold',
         symbol: 'btg',
         segwitHrp: { prod: 'btg', testnet: 'tbtg' },
@@ -291,22 +283,6 @@ var CURRENCIES = [
         symbol: 'eth',
         validator: ETHValidator,
     }, {
-        name: 'EtherZero',
-        symbol: 'etz',
-        validator: ETHValidator,
-    }, {
-        name: 'EthereumClassic',
-        symbol: 'etc',
-        validator: ETHValidator,
-    }, {
-        name: 'Callisto',
-        symbol: 'clo',
-        validator: ETHValidator,
-    }, {
-        name: 'Bankex',
-        symbol: 'bkx',
-        validator: ETHValidator,
-    }, {
         name: 'Cardano',
         symbol: 'ada',
         segwitHrp: { prod: 'addr', testnet: 'addr_test' },
@@ -326,78 +302,6 @@ var CURRENCIES = [
         name: 'Ardor',
         symbol: 'ardr',
         validator: ARDRValidator,
-    }, {
-        name: 'Basic Attention Token',
-        symbol: 'bat',
-        validator: ETHValidator,
-    }, {
-        name: 'Bancor',
-        symbol: 'bnt',
-        validator: ETHValidator,
-    }, {
-        name: 'Civic',
-        symbol: 'cvc',
-        validator: ETHValidator,
-    }, {
-        name: 'Own', // Rebranded from Chainium
-        symbol: 'chx',
-        validator: ETHValidator,
-    }, {
-        name: 'District0x',
-        symbol: 'dnt',
-        validator: ETHValidator,
-    }, {
-        name: 'Gnosis',
-        symbol: 'gno',
-        validator: ETHValidator,
-    }, {
-        name: 'Golem',
-        symbol: 'gnt',
-        validator: ETHValidator,
-    }, {
-        name: 'Matchpool',
-        symbol: 'gup',
-        validator: ETHValidator,
-    }, {
-        name: 'Melon',
-        symbol: 'mln',
-        validator: ETHValidator,
-    }, {
-        name: 'Numeraire',
-        symbol: 'nmr',
-        validator: ETHValidator,
-    }, {
-        name: 'OmiseGO',
-        symbol: 'omg',
-        validator: ETHValidator,
-    }, {
-        name: 'TenX',
-        symbol: 'pay',
-        validator: ETHValidator,
-    }, {
-        name: 'Ripio Credit Network',
-        symbol: 'rcn',
-        validator: ETHValidator,
-    }, {
-        name: 'Augur',
-        symbol: 'rep',
-        validator: ETHValidator,
-    }, {
-        name: 'iExec RLC',
-        symbol: 'rlc',
-        validator: ETHValidator,
-    }, {
-        name: 'Salt',
-        symbol: 'salt',
-        validator: ETHValidator,
-    }, {
-        name: 'Status',
-        symbol: 'snt',
-        validator: ETHValidator,
-    }, {
-        name: 'Storj',
-        symbol: 'storj',
-        validator: ETHValidator,
     }, {
         name: 'STEEM',
         symbol: 'steem',
