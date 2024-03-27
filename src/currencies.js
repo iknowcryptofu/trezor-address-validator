@@ -295,10 +295,6 @@ var CURRENCIES = [
         iAddressTypes: { prod: ['19'], testnet: ['54'] },
         validator: XMRValidator,
     }, {
-        name: 'Aragon',
-        symbol: 'ant',
-        validator: ETHValidator,
-    }, {
         name: 'Ardor',
         symbol: 'ardr',
         validator: ARDRValidator,
@@ -386,15 +382,12 @@ var CURRENCIES = [
         name: 'Scopuly',
         symbol: 'sky',
         validator: XLMValidator,
-    }, {
-        name: 'Ocean Protocol',
-        symbol: 'ocean',
-        validator: ETHValidator,
+    }, 
     //}, {
     //    name: 'PitisCoin',
     //    symbol: 'pts', # FIXME: symbol collides with ProtoShares
     //    validator: BTCValidator,
-    }, {
+    {
         name: 'Solana',
         symbol: 'sol',
         validator: SOLValidator,
