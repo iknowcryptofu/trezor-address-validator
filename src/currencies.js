@@ -35,6 +35,7 @@ var CURRENCIES = [
         segwitHrp: { prod: 'bc', testnet: 'tb', regtest: 'bcrt' },
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4', '3c', '26'], regtest: ['6f', 'c4', '3c', '26'] },
         validator: BTCValidator,
+        nativeToken: true,
     }, {
         name: 'BitcoinCash',
         symbol: 'bch',
