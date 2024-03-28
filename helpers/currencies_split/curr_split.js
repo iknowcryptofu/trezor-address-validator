@@ -19,7 +19,7 @@ function checkForNativeToken(item,index){
     
     if(item.nativeToken == true){
         console.log(index);
-        console.log(item);
+        console.log(item.name);
     }
 }
 // function checkForEth(item){
@@ -30,10 +30,10 @@ function checkForNativeToken(item,index){
 
 var allCurrencies = WAValidator.getCurrencies();
 
-var excludeEth = jsonCurrencies2.jsonCurrencies.filter(checkForEth);
-console.log(excludeEth);
+// var excludeEth = jsonCurrencies2.jsonCurrencies.filter(checkForEth);
+// console.log(excludeEth);
 
-var nativeTokens = jsonCurrencies2.jsonCurrencies.filter(checkForNativeToken);
+var nativeTokens = allCurrencies.filter(checkForNativeToken);
 console.log(nativeTokens);
 
 
