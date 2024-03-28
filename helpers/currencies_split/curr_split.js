@@ -15,21 +15,28 @@ function checkForEth(item,index){
         console.log(item);
     }
 }
-
+function checkForNativeToken(item,index){
+    
+    if(item.nativeToken == true){
+        console.log(index);
+        console.log(item);
+    }
+}
 // function checkForEth(item){
 //     return item.validator != ETHValidator;
 // }
 
-//import {curr }from "./currenciestxt.js";
+
 
 var allCurrencies = WAValidator.getCurrencies();
 
 var excludeEth = jsonCurrencies2.jsonCurrencies.filter(checkForEth);
 console.log(excludeEth);
 
+var nativeTokens = jsonCurrencies2.jsonCurrencies.filter(checkForNativeToken);
+console.log(nativeTokens);
 
 
-//console.log(excludeEth);
 //the following finds 271 currencies in CURRENCIES array var.
 //console.log(allCurrencies.length);
 
