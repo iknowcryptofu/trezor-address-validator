@@ -40,6 +40,7 @@ var allCurrencies = WAValidator.getCurrencies();
 // var nativeTokens = allCurrencies.filter(checkForNativeToken);
 // console.log(nativeTokens);
 
+//log array of native tokens. 27 tokens currently
 var nativeTokens = allCurrencies.filter(checkForNativeTokenToArray);
 var nativeTokensSymbols = nativeTokens.map(token => token.symbol);
 console.log(nativeTokensSymbols);

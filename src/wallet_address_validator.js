@@ -29,5 +29,8 @@ module.exports = {
     findCurrency: function(symbol) {
         return currencies.getByNameOrSymbol(symbol) || null ;
     },
+    sayhi: function() {
+        return "Hi";
+    },
     addressType,
 };
