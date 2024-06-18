@@ -13760,6 +13760,7 @@ var CURRENCIES = [
         regexp: '^[qQpP]{1}[0-9a-zA-Z]{41}$',
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
         validator: BCHValidator,
+        nativeToken: true,
     }, {
         name: 'Bitcoin Diamond',
         symbol: 'bcd',
@@ -13832,6 +13833,7 @@ var CURRENCIES = [
         name: 'NXT',
         symbol: 'nxt',
         validator: NXTValidator,
+        nativeToken: true,
     }, {
         name: 'BioCoin',
         symbol: 'bio',
@@ -13951,6 +13953,7 @@ var CURRENCIES = [
         name: 'Ripple',
         symbol: 'xrp',
         validator: XRPValidator,
+        nativeToken:true,
     }, {
         name: 'Dash',
         symbol: 'dash',
@@ -14001,11 +14004,13 @@ var CURRENCIES = [
         name: 'Ethereum',
         symbol: 'eth',
         validator: ETHValidator,
+        nativeToken: true,
     }, {
         name: 'Cardano',
         symbol: 'ada',
         segwitHrp: { prod: 'addr', testnet: 'addr_test' },
         validator: ADAValidator,
+        nativeToken: true,
     }, {
         name: 'Monero',
         symbol: 'xmr',
@@ -14013,14 +14018,17 @@ var CURRENCIES = [
         subAddressTypes: { prod: ['42'], testnet: ['63'] },
         iAddressTypes: { prod: ['19'], testnet: ['54'] },
         validator: XMRValidator,
+        nativeToken: true,
     }, {
         name: 'Ardor',
         symbol: 'ardr',
         validator: ARDRValidator,
+        nativeToken: true,
     }, {
         name: 'STEEM',
         symbol: 'steem',
-        validator: STEEMValidator
+        validator: STEEMValidator,
+        nativeToken: true,
     }, {
         name: 'Stratis',
         symbol: 'strat',
@@ -14030,23 +14038,28 @@ var CURRENCIES = [
         name: 'Syscoin',
         symbol: 'sys',
         addressTypes: { prod: ['3f'] },
-        validator: SYSValidator
+        validator: SYSValidator,
+        nativeToken: true,
     }, {
         name: 'Cosmos',
         symbol: 'atom',
         validator: ATOMValidator,
+        nativeToken: true,
     }, {
         name: 'Aeternity',
         symbol: 'ae',
         validator: AEValidator,
+        nativeToken: true,
     }, {
         name: 'ICON',
         symbol: 'icx',
         validator: ICXValidator,
+        nativeToken: true,
     }, {
         name: 'Internet of Services',
         symbol: 'IOST',
         validator: IOSTValidator,
+        nativeToken: true,
     // disable iota validation for now
     // }, {
     //     name: 'Iota',
@@ -14056,6 +14069,7 @@ var CURRENCIES = [
         name: 'Nano',
         symbol: 'nano',
         validator: NANOValidator,
+        nativeToken: true,
     }, {
         name: 'RaiBlocks',
         symbol: 'xrb',
@@ -14064,6 +14078,7 @@ var CURRENCIES = [
         name: 'Siacoin',
         symbol: 'sc',
         validator: SCValidator,
+        nativeToken: true,
     }, {
         name: 'HyperSpace',
         symbol: 'xsc',
@@ -14075,6 +14090,7 @@ var CURRENCIES = [
         subAddressTypes: { prod: ['114', '116'], testnet: ['158'] },
         iAddressTypes: { prod: ['115'], testnet: ['157'] },
         validator: LokiValidator,
+        nativeToken: true,
     }, {
         name: 'LBRY Credits',
         symbol: 'lbc',
@@ -14085,18 +14101,22 @@ var CURRENCIES = [
         symbol: 'trx',
         addressTypes: { prod: [0x41], testnet: [0xa0] },
         validator: TRXValidator,
+        nativeToken: true,
     }, {
         name: 'Nem',
         symbol: 'xem',
         validator: NEMValidator,
+        nativeToken: true,
     }, {
         name: 'Lisk',
         symbol: 'lsk',
         validator: LSKValidator,
+        nativeToken: true,
     }, {
         name: 'Stellar',
         symbol: 'xlm',
         validator: XLMValidator,
+        nativeToken: true,
     }, {
         name: 'Scopuly',
         symbol: 'sky',
@@ -14110,22 +14130,27 @@ var CURRENCIES = [
         name: 'Solana',
         symbol: 'sol',
         validator: SOLValidator,
+        nativeToken: true,
     }, {
         name: 'Binance',
         symbol: 'bnb',
         validator: BinanceValidator,
+        nativeToken: true,
     }, {
       name: 'EOS',
       symbol: 'eos',
       validator: EOSValidator,
+      nativeToken: true,
     }, {
         name: 'Tezos',
         symbol: 'xtz',
         validator: XTZValidator,
+        nativeToken: true,
     }, {
         name: 'Hedera Hashgraph',
         symbol: 'hbar',
         validator: HBARValidator,
+        nativeToken: true,
     }, {
         name: 'Verge',
         symbol: 'xvg',
@@ -14134,7 +14159,8 @@ var CURRENCIES = [
     }, {
         name: 'Zilliqa',
         symbol: 'zil',
-        validator: ZILValidator
+        validator: ZILValidator,
+        nativeToken: true,
 	}
 ];
 
@@ -14919,6 +14945,9 @@ module.exports = {
     },
     findCurrency: function(symbol) {
         return currencies.getByNameOrSymbol(symbol) || null ;
+    },
+    sayhi: function() {
+        return "Hi";
     },
     addressType,
 };
