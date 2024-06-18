@@ -45,7 +45,15 @@ var nativeTokens = allCurrencies.filter(checkForNativeTokenToArray);
 var nativeTokensSymbols = nativeTokens.map(token => token.symbol);
 console.log(nativeTokensSymbols);
 
-
+var nativeTokens2 = [
+    'btc',   'bch',  'nxt',  'xrp',
+    'eth',   'ada',  'xmr',  'ardr',
+    'steem', 'sys',  'atom', 'ae',
+    'icx',   'IOST', 'nano', 'sc',
+    'loki',  'trx',  'xem',  'lsk',
+    'xlm',   'sol',  'bnb',  'eos',
+    'xtz',   'hbar', 'zil'
+  ]
 
 //the following finds 271 currencies in CURRENCIES array var.
 //console.log(allCurrencies.length);
@@ -112,3 +120,5 @@ function clone(a) {
 // const {CURRENCIES} = require("./currencies");
 
 // console.log(CURRENCIES.length);
+
+module.exports = nativeTokensSymbols
