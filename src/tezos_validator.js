@@ -3,6 +3,11 @@ const base58 = require('./crypto/base58');
 const cryptoUtils = require('./crypto/utils');
 
 const prefix = new Uint8Array([6, 161, 159]);
+const tr2_prefix = new Uint8Array([6, 161, 161]);
+const tr3_prefix = new Uint8Array([6, 161, 164]);
+const tr4_prefix = new Uint8Array([6, 161, 166]);
+const sr1_prefix = new Uint8Array([6, 124, 117]);
+const KT1_prefix = new Uint8Array([2, 90, 121]);
 
 function decodeRaw(buffer) {
     let payload = buffer.slice(0, -4);
@@ -25,6 +30,7 @@ const isValidAddress = function(address) {
         let payload = decodeRaw(buffer);
         if (!payload)
             return false;
+        console.log("The Payload is: " + payload);
         payload.slice(prefix.length);
         return true;
     } catch (e) {
