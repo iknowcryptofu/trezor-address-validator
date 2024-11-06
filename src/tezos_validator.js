@@ -9,6 +9,8 @@ const tr4_prefix = new Uint8Array([6, 161, 166]);
 const sr1_prefix = new Uint8Array([6, 124, 117]);
 const KT1_prefix = new Uint8Array([2, 90, 121]);
 
+const arrays = [prefix, tr2_prefix, tr3_prefix, tr4_prefix, sr1_prefix, KT1_prefix];
+
 function decodeRaw(buffer) {
     let payload = buffer.slice(0, -4);
     let checksum = buffer.slice(-4);
@@ -33,12 +35,32 @@ const isValidAddress = function(address) {
         if (!payload)
             return false;
         console.log("The Payload 2nd version is: " + payload);
-        payload.slice(prefix.length);
+        //payload.slice(prefix.length);
+        const fixedArray = payload.slice(0,3);
+        console.log(fixedArray);
+        const matchingID = getMatchingArrayID(arrays, fixedArray);
+        console.log(matchingID); 
         return true;
     } catch (e) {
         return false;
     }
 };
+
+function getMatchingArrayID(arrays, fixedArray) {
+    for (let i = 0; i < arrays.length; i++) {
+      const currentArray = arrays[i];
+      if (
+        currentArray.length === fixedArray.length &&
+        currentArray.every((val, index) => val === fixedArray[index])
+      ) {
+        return `array${i + 1}`; // Return the name based on index
+      }
+    }
+    return null; // Return null if no match is found
+  }
+
+//const matchingID = getMatchingArrayID(arrays, fixedArray);
+//console.log(matchingID); // Output: array1, array6, etc.
 
 module.exports = {
     isValidAddress,
