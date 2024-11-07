@@ -28,6 +28,19 @@ function decodeRaw(buffer) {
     return payload;
 }
 
+function getMatchingArrayID(arrays, fixedArray) {
+    for (let i = 0; i < arrays.length; i++) {
+      const currentArray = arrays[i];
+      if (
+        currentArray.length === fixedArray.length &&
+        currentArray.every((val, index) => val === fixedArray[index])
+      ) {
+        return true; // Return true if match found
+      }
+    }
+    return false; // Return false if no match is found
+  }
+
 const isValidAddress = function(address) {
     try {
         let buffer = base58.decode(address);
@@ -39,6 +52,8 @@ const isValidAddress = function(address) {
         const fixedArray = payload.slice(0,3);
         console.log(fixedArray);
         const matchingID = getMatchingArrayID(arrays, fixedArray);
+        if(!matchingID)
+            return false;
         console.log(matchingID); 
         return true;
     } catch (e) {
@@ -46,18 +61,7 @@ const isValidAddress = function(address) {
     }
 };
 
-function getMatchingArrayID(arrays, fixedArray) {
-    for (let i = 0; i < arrays.length; i++) {
-      const currentArray = arrays[i];
-      if (
-        currentArray.length === fixedArray.length &&
-        currentArray.every((val, index) => val === fixedArray[index])
-      ) {
-        return `array${i + 1}`; // Return the name based on index
-      }
-    }
-    return null; // Return null if no match is found
-  }
+
 
 //const matchingID = getMatchingArrayID(arrays, fixedArray);
 //console.log(matchingID); // Output: array1, array6, etc.
