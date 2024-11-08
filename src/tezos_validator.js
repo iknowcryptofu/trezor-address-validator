@@ -17,8 +17,8 @@ function decodeRaw(buffer) {
     let newChecksum = cryptoUtils.hexStr2byteArray(
         cryptoUtils.sha256x2(cryptoUtils.byteArray2hexStr(payload))
     );
-    console.log("The Payload is:" + payload + "\nThe checksums are: " + checksum + "\nThe newChecksums are:" + newChecksum + 
-        "\ntr1 decoded:" + base58.decode('tz1Lhf4J9Qxoe3DZ2nfe8FGDnvVj7oKjnMY6'));
+    // console.log("The Payload is:" + payload + "\nThe checksums are: " + checksum + "\nThe newChecksums are:" + newChecksum + 
+    //     "\ntr1 decoded:" + base58.decode('tz1Lhf4J9Qxoe3DZ2nfe8FGDnvVj7oKjnMY6'));
 
     if (checksum[0] ^ newChecksum[0] |
         checksum[1] ^ newChecksum[1] |
@@ -47,14 +47,14 @@ const isValidAddress = function(address) {
         let payload = decodeRaw(buffer);
         if (!payload)
             return false;
-        console.log("The Payload 2nd version is: " + payload);
+        //console.log("The Payload 2nd version is: " + payload);
         //payload.slice(prefix.length);
         const fixedArray = payload.slice(0,3);
-        console.log(fixedArray);
+        //console.log(fixedArray);
         const matchingID = getMatchingArrayID(arrays, fixedArray);
         if(!matchingID)
             return false;
-        console.log(matchingID); 
+        //console.log(matchingID); 
         return true;
     } catch (e) {
         return false;
