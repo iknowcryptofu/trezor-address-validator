@@ -82,11 +82,6 @@ var CURRENCIES = [
         addressTypes: { prod: ['19', '05'], testnet: ['6f', 'c4'] },
         validator: BTCValidator,
     }, {
-        name: 'FreiCoin',
-        symbol: 'frc',
-        addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
-        validator: BTCValidator,
-    }, {
         name: 'ProtoShares',
         symbol: 'pts',
         addressTypes: { prod: ['38', '05'], testnet: ['6f', 'c4'] },

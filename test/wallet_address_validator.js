@@ -178,18 +178,6 @@ describe('WAValidator.validate()', function () {
             valid('2MxKEf2su6FGAUfCEAHreGFQvEYrfYNHvL7', 'beavercoin', 'testnet');
         });
 
-        it('should return true for correct freicoin addresses', function () {
-            valid('1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa', 'freicoin');
-            valid('1oNLrsHnBcR6dpaBpwz3LSwutbUNkNSjs', 'freicoin');
-            valid('1SQHtwR5oJRKLfiWQ2APsAd9miUc4k2ez', 'freicoin');
-            valid('1SQHtwR5oJRKLfiWQ2APsAd9miUc4k2ez', 'FRC');
-            valid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'freicoin', 'testnet');
-
-            // p2sh addresse
-            valid('3NJZLcZEEYBpxYEUGewU4knsQRn1WM5Fkt', 'freicoin');
-            valid('2MxKEf2su6FGAUfCEAHreGFQvEYrfYNHvL7', 'freicoin', 'testnet');
-        });
-
         it('should return true for correct protoshares addresses', function () {
             valid('PaNGELmZgzRQCKeEKM6ifgTqNkC4ceiAWw', 'protoshares');
             valid('Piev8TMX2fT5mFtgxx2TXJaqXP37weMPuD', 'protoshares');
@@ -957,10 +945,6 @@ describe('WAValidator.validate()', function () {
 
         it('should return false for incorrect beavercoin addresses', function () {
             commonTests('beavercoin');
-        });
-
-        it('should return false for incorrect freicoin addresses', function () {
-            commonTests('freicoin');
         });
 
         it('should return false for incorrect protoshares addresses', function () {
