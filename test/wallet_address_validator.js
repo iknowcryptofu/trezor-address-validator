@@ -492,11 +492,6 @@ describe('WAValidator.validate()', function () {
             valid('8YW5qcTjeyqX5kESsqu2BUdXiedgssegtQ', 'SolarCoin');
         });
 
-        it('should return true for correct tether addresses', function () {
-            valid('3MbYQMMmSkC3AgWkj9FMo5LsPTW1zBTwXL', 'usdt');
-            valid('1KdXaqcBeoMAFVAPwTmYvDbEq6RnvNPF6J', 'tether');
-        });
-
         it('should return true for correct expanse addresses', function () {
             valid('0xbab463743603a253bdf1f84975b1a9517505ae05', 'exp');
             valid('0x5d0777cb5d6977873904864c6ab531f4b3261f0b', 'expanse');
@@ -1002,16 +997,8 @@ describe('WAValidator.validate()', function () {
             commonTests('slr');
         });
 
-        it('should return false for incorrect tether addresses', function () {
-            commonTests('usdt');
-        });
-
         it('should return false for incorrect expanse addresses', function () {
             commonTests('exp');
-        });
-
-        it('should return false for incorrect usdt addresses', function () {
-            commonTests('usdt');
         });
 
         it('should return false for incorrect bankex addresses', function () {

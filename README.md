@@ -283,7 +283,6 @@ npm install trezor-address-validator
 * Telcoin/tel `'Telcoin'` or `'tel'`
 * TEMCO/temco `'TEMCO'` or `'temco'`
 * TenX/pay `'TenX'` or `'pay'`
-* Tether/usdt `'Tether'` or `'usdt'`
 * Tezos/xtz `'Tezos'` or `'xtz'`
 * Tierion/tnt `'Tierion'` or `'tnt'`
 * Time New Bank/tnb `'Time New Bank'` or `'tnb'`

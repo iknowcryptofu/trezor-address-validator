@@ -222,11 +222,6 @@ var CURRENCIES = [
         addressTypes: { prod: ['1e', '3f'], testnet: [] },
         validator: BTCValidator,
     }, {
-        name: 'Tether',
-        symbol: 'usdt',
-        addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
-        validator: BTCValidator,
-    }, {
         name: 'Ripple',
         symbol: 'xrp',
         validator: XRPValidator,
