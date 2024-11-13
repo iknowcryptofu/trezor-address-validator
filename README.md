@@ -70,7 +70,6 @@ npm install trezor-address-validator
 * Binance USD/busd `'Binance USD'` or `'busd'`
 * BioCoin/bio `'BioCoin'` or `'bio'`
 * Bitcoin/btc `'Bitcoin'` or `'btc'`
-* Bitcoin Diamond/bcd `'Bitcoin Diamond'` or `'bcd'`
 * Bitcoin SV/bsv `'Bitcoin SV'` or `'bsv'`
 * BitcoinCash/bch `'BitcoinCash'` or `'bch'`
 * BitcoinGold/btg `'BitcoinGold'` or `'btg'`
