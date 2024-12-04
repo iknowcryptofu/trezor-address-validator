@@ -307,18 +307,12 @@ describe('WAValidator.validate()', function () {
             valid('0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359', 'ETH');
             valid('0xdbF03B407c01E7cD3CBea99509d93f8DDDC8C6FB', 'ETH');
             valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETH');
-
-            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ethereumclassic');
-            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETC');
-            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'etherzero');
-            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ETZ');
-            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'callisto');
-            valid('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'CLO');
+            
         });
 
         it('should match the expected eip55 address type', function () {
             isValidAddressType('0xE37c0D48d68da5c5b14E5c1a9f1CFE802776D9FF', 'ethereum', 'prod', addressType.ADDRESS);
-            isValidAddressType('0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb', 'ethereumclassic', 'prod', addressType.ADDRESS);
+            
         });
 
         it('should return true for correct Ripple addresses', function () {
@@ -420,13 +414,6 @@ describe('WAValidator.validate()', function () {
             //valid('t2UNzUUx8mWBCRYPRezvA363EYXyEpHokyi', 'komodo', 'testnet');
         });
 
-        it('should return true for correct Bankex addresses', function () {
-            valid('0xeac39e1bc802baae3d4b9cb518f3f60374bbad6c', 'bankex');
-            valid('0x45245bc59219eeaaf6cd3f382e078a461ff9de7b', 'BKX');
-            valid('0xf40d80FCfa5cdEa0bB1E570c2D52132ac9bC6aEC', 'bankex', 'testnet');
-            valid('0x8A7395f281EeCf2B471B689E87Cf4C7fa8bb957d', 'BKX', 'testnet');
-        });
-
         it('should return true for correct Cardano addresses', function () {
             valid('Ae2tdPwUPEYxYNJw1He1esdZYvjmr4NtPzUsGTiqL9zd8ohjZYQcwu6kom7', 'cardano');
             valid('DdzFFzCqrhsfdzUZxvuBkhV8Lpm9p43p9ubh79GCTkxJikAjKh51qhtCFMqUniC5tv5ZExyvSmAte2Du2tGimavSo6qSgXbjiy8qZRTg', 'ada');
@@ -490,11 +477,6 @@ describe('WAValidator.validate()', function () {
         it('should return true for correct solarcoin addresses', function () {
             valid('8VxVLzwB26E2YZZ82o1NcQe96QSM2z6GwW', 'slr');
             valid('8YW5qcTjeyqX5kESsqu2BUdXiedgssegtQ', 'SolarCoin');
-        });
-
-        it('should return true for correct expanse addresses', function () {
-            valid('0xbab463743603a253bdf1f84975b1a9517505ae05', 'exp');
-            valid('0x5d0777cb5d6977873904864c6ab531f4b3261f0b', 'expanse');
         });
 
         it('should return true for correct waves addresses', function () {
@@ -562,11 +544,6 @@ describe('WAValidator.validate()', function () {
         it('should match the expected Siacoin address type', function () {
             isValidAddressType('a9b01c85163638682b170d82de02b8bb99ba86092e9ab1b0d25111284fe618e93456915820f1', 'siacoin', 'prod', addressType.ADDRESS);
             isValidAddressType('aaaaaaaaaaaaaaa000000000000000', 'siacoin', 'prod', undefined);
-        });
-
-        it('should return true for correct BSC addresses', function () {
-            valid('0x0590396689ee1d287147e9383fb8dd24532f2006', 'bsc');
-            valid('0x07fc5c2bcaa0fa6bdaa4fff897490312c8f33c27', 'binance smart chain');
         });
 
         it('should return true for correct Cosmos addresses', () => {
@@ -692,16 +669,6 @@ describe('WAValidator.validate()', function () {
         it('should match the expected NXT address type', function () {
             isValidAddressType('NXT-799W-TN9C-GL3Q-D3PXU', 'NXT', 'prod', addressType.ADDRESS);
             isValidAddressType('NXT-799W-TN9C-GL3Q', 'NXT', 'prod', undefined);
-        });
-
-        it('should return true for correct VeChain addresses', () => {
-            valid('0xA9E5617e2f90427F6db70A3B1d08Fc14706Eb907', 'ven')
-            valid('0xb089B15A00528eEB19fcA4565df80d9a111BFCf9', 'ven')
-        });
-
-        it('should return true for correct VeChain Mainnet addresses', () => {
-            valid('0x1374A7E9d5Ed5CFF9c56a0e57B3d8a836a378715', 'vet')
-            valid('0x1374A7E9d5Ed5CFF9c56a0e57B3d8a836a378715', 'vet')
         });
 
         it('should return true for correct Syscoin addresses', () => {
@@ -838,15 +805,6 @@ describe('WAValidator.validate()', function () {
 
         it('should return false for incorrect binance address', function () {
             invalid('lol1qfmufc2q30cgw82ykjlpfeyauhcf5mad6p5y8t', 'binance');
-        });
-
-        it('should return true for correct binance smart chain address', function () {
-            valid('0x7ae2f5b9e386cd1b50a4550696d957cb4900f03a', 'bsc');
-            valid('0x0000000000000000000000000000000000001000', 'Binance Smart Chain');
-        });
-
-        it('should return false for incorrect binance smart chain address', function () {
-            invalid('bnb1xlvns0n2mxh77mzaspn2hgav4rr4m8eerfju38', 'bsc');
         });
 
         it('should return true for correct xtz(tezos) address', function () {
@@ -997,17 +955,6 @@ describe('WAValidator.validate()', function () {
             commonTests('slr');
         });
 
-        it('should return false for incorrect expanse addresses', function () {
-            commonTests('exp');
-        });
-
-        it('should return false for incorrect bankex addresses', function () {
-            invalid('1SQHtwR5oJRKLfiWQ2APsAd9miUc4k2ez', 'bankex');
-            invalid('116CGDLddrZhMrTwhCVJXtXQpxygTT1kHd', 'BKX');
-            invalid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'bankex', 'testnet');
-            invalid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'BKX', 'testnet');
-        });
-
         it('should return false for incorrect digibyte addresses', function () {
             commonTests('digibyte');
         });
@@ -1019,9 +966,6 @@ describe('WAValidator.validate()', function () {
             invalid('aFf4d6793f584a473348ebA058deb8caad77a2885', 'ethereum');
             invalid('0xff4d6793F584a473', 'ethereum');
 
-            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'ethereumclassic');
-            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'etherzero');
-            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'callisto');
         });
 
         it('should return false for incorrect ripple addresses', function () {

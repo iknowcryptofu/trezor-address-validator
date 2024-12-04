@@ -13762,11 +13762,6 @@ var CURRENCIES = [
         validator: BCHValidator,
         nativeToken: true,
     }, {
-        name: 'Bitcoin Diamond',
-        symbol: 'bcd',
-        validator: BTCValidator,
-        addressTypes: { prod: ['00'] }
-	}, {
         name: 'Bitcoin SV',
         symbol: 'bsv',
         regexp: '^[qQ]{1}[0-9a-zA-Z]{41}$',
@@ -13938,11 +13933,6 @@ var CURRENCIES = [
         symbol: 'dgb',
         segwitHrp: { prod: 'dgb' },
         addressTypes: { prod: ['1e', '3f'], testnet: [] },
-        validator: BTCValidator,
-    }, {
-        name: 'Tether',
-        symbol: 'usdt',
-        addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
         validator: BTCValidator,
     }, {
         name: 'Ripple',
