@@ -441,6 +441,18 @@ module.exports = {
     },
     getAll: function () {
         return CURRENCIES;
+    },
+    getNameOrSymbol: function (currencyNameOrSymbol) {
+        var nameOrSymbol = currencyNameOrSymbol.toLowerCase();
+        return CURRENCIES.find(function (currency) {
+            if(currency.name.toLowerCase() === nameOrSymbol) {
+                //return currency.name.toLowerCase();
+                
+            }
+            else if(currency.symbol.toLowerCase() === nameOrSymbol){
+                return currency.symbol.toLowerCase();
+            }
+        });
     }
 };
 
