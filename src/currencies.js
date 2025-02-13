@@ -36,6 +36,7 @@ var CURRENCIES = [
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4', '3c', '26'], regtest: ['6f', 'c4', '3c', '26'] },
         validator: BTCValidator,
         nativeToken: true,
+        addrExample: "12KYrjTdVGjFMtaxERSk3gphreJ5US8aUP"
     }, {
         name: 'BitcoinCash',
         symbol: 'bch',
@@ -43,6 +44,7 @@ var CURRENCIES = [
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
         validator: BCHValidator,
         nativeToken: true,
+        addrExample: "qp3wjpa3tjlj042z2wv7hahsldgwhwy0rq9sywjpyy"
     }, {
         name: 'Bitcoin SV',
         symbol: 'bsv',
@@ -61,6 +63,7 @@ var CURRENCIES = [
         segwitHrp: { prod: 'ltc', testnet: 'tltc' },
         addressTypes: { prod: ['30', '32'], testnet: ['6f', 'c4', '3a'] },
         validator: BTCValidator,
+        addrExample: "LVg2kJoFNg45Nbpy53h7Fe1wKyeXVRhMH9"
     }, {
         name: 'PeerCoin',
         symbol: 'ppc',
