@@ -165,31 +165,7 @@ describe('WAValidator.validate()', function () {
             isValidAddressType('A7JjzK9k9x5b2MkkQzqt91WZsuu7wTu6iS', 'dogecoin', 'prod', addressType.P2SH)
             isValidAddressType('qwerty', 'dogecoin', 'prod', undefined);
         });
-
-        it('should return true for correct beavercoin addresses', function () {
-            valid('BPPtB4EpPi5wCaGXZuNyKQgng8ya579qUh', 'beavercoin');
-            valid('BC1LLYoE4mTCHTJhVYvLGxhRTwAHyWTQ49', 'beavercoin');
-            valid('BBuyeg2vjtyFdMNj3LTxuVra4wJMKVAY9C', 'beavercoin');
-            valid('BBuyeg2vjtyFdMNj3LTxuVra4wJMKVAY9C', 'BVC');
-            valid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'beavercoin', 'testnet');
-
-            // p2sh addresses
-            valid('3NJZLcZEEYBpxYEUGewU4knsQRn1WM5Fkt', 'beavercoin');
-            valid('2MxKEf2su6FGAUfCEAHreGFQvEYrfYNHvL7', 'beavercoin', 'testnet');
-        });
-
-        it('should return true for correct protoshares addresses', function () {
-            valid('PaNGELmZgzRQCKeEKM6ifgTqNkC4ceiAWw', 'protoshares');
-            valid('Piev8TMX2fT5mFtgxx2TXJaqXP37weMPuD', 'protoshares');
-            valid('PgsuLoe9ojRKFGJGVpqqk37gAqNJ4ozboD', 'protoshares');
-            valid('PgsuLoe9ojRKFGJGVpqqk37gAqNJ4ozboD', 'PTS');
-            valid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'protoshares', 'testnet');
-
-            //p2sh addresses
-            valid('3NJZLcZEEYBpxYEUGewU4knsQRn1WM5Fkt', 'protoshares');
-            valid('2MxKEf2su6FGAUfCEAHreGFQvEYrfYNHvL7', 'protoshares', 'testnet');
-        });
-
+        
         it('should return true for correct megacoin addresses', function () {
             valid('MWUHaNxjXGZUYTh92i3zuDmsnH1rHSBk5M', 'megacoin');
             valid('MSAkrhRyte7bz999Ga5SqYjzypFFYa2oEb', 'megacoin');
@@ -894,14 +870,6 @@ describe('WAValidator.validate()', function () {
 
         it('should return false for incorrect dogecoin addresses', function () {
             commonTests('dogecoin');
-        });
-
-        it('should return false for incorrect beavercoin addresses', function () {
-            commonTests('beavercoin');
-        });
-
-        it('should return false for incorrect protoshares addresses', function () {
-            commonTests('protoshares');
         });
 
         it('should return false for incorrect megacoin addresses', function () {

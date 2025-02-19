@@ -36,7 +36,8 @@ var CURRENCIES = [
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4', '3c', '26'], regtest: ['6f', 'c4', '3c', '26'] },
         validator: BTCValidator,
         nativeToken: true,
-        addrExample: "12KYrjTdVGjFMtaxERSk3gphreJ5US8aUP"
+        addrExample: "12KYrjTdVGjFMtaxERSk3gphreJ5US8aUP",
+        blockExplorer: "https://www.blockchain.com/explorer"
     }, {
         name: 'BitcoinCash',
         symbol: 'bch',
@@ -44,19 +45,15 @@ var CURRENCIES = [
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
         validator: BCHValidator,
         nativeToken: true,
-        addrExample: "qp3wjpa3tjlj042z2wv7hahsldgwhwy0rq9sywjpyy"
+        addrExample: "qp3wjpa3tjlj042z2wv7hahsldgwhwy0rq9sywjpyy",
+        blockExplorer: "https://explorer.bitcoinunlimited.info/"
     }, {
         name: 'Bitcoin SV',
         symbol: 'bsv',
         regexp: '^[qQ]{1}[0-9a-zA-Z]{41}$',
         addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4'] },
         validator: BCHValidator,
-    }, {
-        name: 'Fujicoin',
-        symbol: 'fjc',
-        segwitHrp: { prod: 'fc', testnet: 'tf' },
-        addressTypes: { prod: ['24', '10'], testnet: ['4a', 'c4'] },
-        validator: BTCValidator,
+        blockExplorer: "https://whatsonchain.com/"
     }, {
         name: 'LiteCoin',
         symbol: 'ltc',
@@ -74,16 +71,7 @@ var CURRENCIES = [
         symbol: 'doge',
         addressTypes: { prod: ['1e', '16'], testnet: ['71', 'c4'] },
         validator: BTCValidator,
-    }, {
-        name: 'BeaverCoin',
-        symbol: 'bvc',
-        addressTypes: { prod: ['19', '05'], testnet: ['6f', 'c4'] },
-        validator: BTCValidator,
-    }, {
-        name: 'ProtoShares',
-        symbol: 'pts',
-        addressTypes: { prod: ['38', '05'], testnet: ['6f', 'c4'] },
-        validator: BTCValidator,
+        addrExample: "DPpJVPpvPNP6i6tMj4rTycAGh8wReTqaSU"
     }, {
         name: 'MegaCoin',
         symbol: 'mec',
@@ -391,12 +379,7 @@ var CURRENCIES = [
         name: 'Scopuly',
         symbol: 'sky',
         validator: XLMValidator,
-    }, 
-    //}, {
-    //    name: 'PitisCoin',
-    //    symbol: 'pts', # FIXME: symbol collides with ProtoShares
-    //    validator: BTCValidator,
-    {
+    }, {
         name: 'Solana',
         symbol: 'sol',
         validator: SOLValidator,

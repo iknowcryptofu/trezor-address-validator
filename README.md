@@ -42,7 +42,7 @@ npm install trezor-address-validator
 * Aeternity/ae `'Aeternity'` or `'ae'` 
 * Ardor/ardr `'Ardor'` or `'ardr'` 
 * AuroraCoin/aur `'AuroraCoin'` or `'aur'` 
-* BeaverCoin/bvc `'BeaverCoin'` or `'bvc'` 
+
 * Binance/bnb `'Binance'` or `'bnb'` 
 * BioCoin/bio `'BioCoin'` or `'bio'` 
 * Bitcoin/btc `'Bitcoin'` or `'btc'` 
@@ -59,7 +59,7 @@ npm install trezor-address-validator
 * DogeCoin/doge `'DogeCoin'` or `'doge'` 
 * EOS/eos `'EOS'` or `'eos'` 
 * Ethereum/eth `'Ethereum'` or `'eth'` 
-* Fujicoin/fjc `'Fujicoin'` or `'fjc'` 
+
 * GameCredits/game `'GameCredits'` or `'game'` 
 * GarliCoin/grlc `'GarliCoin'` or `'grlc'` 
 * Groestlcoin/grs `'Groestlcoin'` or `'grs'` 
@@ -86,7 +86,7 @@ npm install trezor-address-validator
 * PeerCoin/ppc `'PeerCoin'` or `'ppc'` 
 * PIVX/pivx `'PIVX'` or `'pivx'` 
 * PrimeCoin/xpm `'PrimeCoin'` or `'xpm'` 
-* ProtoShares/pts `'ProtoShares'` or `'pts'` 
+
 * Qtum/qtum `'Qtum'` or `'qtum'` 
 * RaiBlocks/xrb `'RaiBlocks'` or `'xrb'` 
 * Ravencoin/rvn `'Ravencoin'` or `'rvn'` 
